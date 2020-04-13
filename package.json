@@ -1,0 +1,69 @@
+{
+  "name": "rms-inspection",
+  "version": "1.0.0",
+  "description": "rms inspection micro service",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "docxtemplater": "^3.15.4",
+    "egg": "^2.15.1",
+    "egg-cors": "^2.2.0",
+    "egg-extend": "github:wwinstonWang/egg-extend",
+    "egg-jwt": "^3.1.7",
+    "egg-multipart": "^2.7.1",
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^5.0.0",
+    "egg-static": "^2.2.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "linq": "^3.2.0",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.5",
+    "nacos": "^1.0.0",
+    "pizzip": "^3.0.6",
+    "svg-captcha": "^1.4.0",
+    "uuid": "^3.3.3",
+    "xlsx-template": "^0.5.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "roadhog": "^0.6.1",
+    "stream-wormhole": "^1.1.0",
+    "super-queue": "^0.2.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-rms-inspection",
+    "stop": "egg-scripts stop --title=egg-server-rms-inspection",
+    "dev": "egg-bin dev",
+    "build": "SET_PUBLIC_PATH=true roadhog build",
+    "debug": "egg-bin debug",
+    "test": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "winston",
+  "license": "MIT"
+}
